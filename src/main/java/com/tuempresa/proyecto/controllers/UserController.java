@@ -20,7 +20,9 @@ public class UserController {
         String jwt = token.substring(7);
 
         // Extraemos el nombre para demostrar que el token funciona
-        String username = jwtUtil.extractUsername(jwt);
+        //String username = jwtUtil.extractUsername(jwt);
+        // Cambia esta línea en tu UserController:
+        String username = jwtUtil.getUsernameFromToken(jwt);
 
         Map<String, String> response = new HashMap<>();
         response.put("mensaje", "¡Bienvenido a la zona protegida!");
